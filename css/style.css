@@ -678,6 +678,11 @@ img {
   text-decoration: none;
 }
 
+.cards__link:hover .cards__description,
+.cards__link:hover .cards__thumb::before {
+  opacity: 1;
+}
+
 .cards__title {
   margin-top: 0;
   margin-bottom: 4px;
@@ -691,17 +696,37 @@ img {
   letter-spacing: 0.06em;
 }
 
+.cards__thumb {
+  position: relative;
+}
+
+.cards__thumb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cards-bg-color);
+  opacity: 0;
+}
+
 .cards__description {
-  display: none;
+  position: absolute;
+  /* display: inline-block; */
+  top: 63px;
+  left: 24px;
+  right: 24px;
+  /* transform: translate(-50%, -50%); */
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 24px;
-  margin-right: 24px;
+  /* margin-left: 24px;
+  margin-right: 24px; */
   color: var(--white-color);
-  background-color: var(--cards-bg-color);
 
   font-size: 18px;
   line-height: 1.56;
+  opacity: 0;
 }
 
 .cards__category {
