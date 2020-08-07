@@ -309,14 +309,18 @@ img {
 }
 
 .employment__item {
+  position: relative;
   width: calc((100% - 60px) / 3);
 }
 
 .employment__text {
+  position: absolute;
+  bottom: 0;
   padding-top: 27px;
   padding-bottom: 27px;
   margin-top: 0;
   margin-bottom: 0;
+  width: 100%;
   text-align: center;
 
   color: var(--white-color);
