@@ -398,7 +398,8 @@ img {
   background-position: center;
 }
 
-.team-social__link:hover {
+.team-social__link:hover,
+.team-social__link:focus {
   background-color: var(--accent-text-color);
   --color1: white;
 }
@@ -452,7 +453,8 @@ img {
   text-align: center;
 }
 
-.clients__item:hover {
+.clients__item:hover,
+.clients__item:focus {
   color: var(--accent-text-color);
   border-color: var(--accent-text-color);
   --color1: var(--accent-text-color);
@@ -544,7 +546,8 @@ img {
   --color1: var(--white-color);
 }
 
-.join__link:hover {
+.join__link:hover,
+.join__link:focus {
   background-color: var(--accent-text-color);
 }
 
@@ -679,8 +682,11 @@ img {
 }
 
 .cards__link:hover .cards__description,
-.cards__link:hover .cards__thumb::before {
+.cards__link:hover .cards__thumb::before,
+.cards__link:focus .cards__description,
+.cards__link:focus .cards__thumb::before {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .cards__title {
@@ -698,6 +704,7 @@ img {
 
 .cards__thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .cards__thumb::before {
@@ -709,6 +716,8 @@ img {
   height: 100%;
   background-color: var(--cards-bg-color);
   opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
 }
 
 .cards__description {
