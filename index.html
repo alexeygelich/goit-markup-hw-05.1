@@ -64,7 +64,9 @@
       <section class="hero-section">
         <div class="container hero">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="hero__button">Заказать услугу</a>
+          <button class="hero__button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -426,12 +428,59 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <b class="modal__title">Оставьте свои данные, мы вам перезвоним</b>
+        <form action="">
+          <ul class="modal__list list">
+            <li class="modal__list--item">
+              <input type="text" name="name" />
+              <label for="name">
+                <svg width="12" height="12">
+                  <use href="./img/symbol-defs.svg#icon-person-black"></use>
+                </svg>
+                Имя
+              </label>
+            </li>
+            <li class="modal__list--item">
+              <input type="text" name="phone" /><label for="phone">
+                <svg width="13" height="13">
+                  <use href="./img/symbol-defs.svg#icon-phone-black"></use>
+                </svg>
+                Телефон</label
+              >
+            </li>
+            <li class="modal__list--item">
+              <input type="text" name="mail" /><label for="mail">
+                <svg width="15" height="12">
+                  <use href="./img/symbol-defs.svg#icon-email-black"></use>
+                </svg>
+                Почта</label
+              >
+            </li>
+            <li class="modal__list--item">
+              <input class="modal__comment" type="text" name="comment" /><label
+                for="comment"
+                >Комментарий</label
+              >
+            </li>
+            <li class="modal__list--item">
+              <input type="checkbox" name="checkbox" /><label for="comment"
+                >Соглашаюсь с рассылкой и принимаю
+                <a class="modal__link" href="">Условия договора</a></label
+              >
+            </li>
+          </ul>
+        </form>
+        <button data-modal-close>Отправить</button>
+        <button class="modal__close" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./img/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
-
-<ul class="li"></ul>
-<ul class="li"></ul>
-<ul class="li"></ul>
-<ul class="li"></ul>
-<ul class="li"></ul>
-<ul class="li"></ul>
