@@ -147,8 +147,8 @@ img {
 
 .auth-nav__link--icon {
   margin-right: 10px;
-  --color2: var(--primery-text-color);
-  transition: color var(--time-animation) var(--cubic-bezier-dafault);
+  fill: var(--primery-text-color);
+  transition: fill var(--time-animation) var(--cubic-bezier-dafault);
 }
 
 .auth-nav__link--phone {
@@ -160,8 +160,6 @@ img {
   display: flex;
   align-items: center;
   color: var(--primery-text-color);
-  --color1: var(--primery-text-color);
-
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -175,8 +173,7 @@ img {
 
 .auth-nav__link:hover .auth-nav__link--icon,
 .auth-nav__link:focus .auth-nav__link--icon {
-  --color1: var(--accent-text-color);
-  --color5: var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
 
 /* Hero */
@@ -406,15 +403,21 @@ img {
   transition: background-color var(--time-animation) var(--cubic-bezier-dafault);
 }
 
-.team-social__link:hover,
-.team-social__link:focus {
-  background-color: var(--accent-text-color);
-  --color3: white;
-}
-
 .team-social__link--icon {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
+  transition: fill var(--time-animation) var(--cubic-bezier-dafault);
+}
+
+.team-social__link:hover,
+.team-social__link:focus {
+  background-color: var(--accent-text-color);
+}
+
+.team-social__link:hover .team-social__link--icon,
+.team-social__link:focus .team-social__link--icon {
+  fill: var(--white-color);
 }
 
 .team__text {
@@ -469,10 +472,20 @@ img {
   transition: border-color var(--time-animation) var(--cubic-bezier-dafault);
 }
 
+.clients__item--icon {
+  fill: var(--primery-text-color);
+  transition: fill var(--time-animation) var(--cubic-bezier-dafault);
+}
+
 .clients__link:hover,
 .clients__link:focus {
   border-color: var(--accent-text-color);
-  --color3: var(--accent-text-color);
+  fill: var(--accent-text-color);
+}
+
+.clients__link:hover .clients__item--icon,
+.clients__link:focus .clients__item--icon {
+  fill: var(--accent-text-color);
 }
 
 /* Footer */
@@ -550,7 +563,6 @@ img {
   background-color: var(--background-social);
   background-repeat: no-repeat;
   background-position: center;
-  --color3: var(--white-color);
   transition: background-color var(--time-animation) var(--cubic-bezier-dafault);
 }
 
@@ -562,18 +574,7 @@ img {
 .join__social--icon {
   width: 20px;
   height: 20px;
-}
-
-.join__social--twitter {
-  background-image: url('../img/twitter-1.svg');
-}
-
-.join__social--facebook {
-  background-image: url('../img/facebook-1.svg');
-}
-
-.join__social--linkedin {
-  background-image: url('../img/linkedin-1.svg');
+  fill: var(--white-color);
 }
 
 /* Subscribe */
