@@ -160,6 +160,7 @@ img {
   display: flex;
   align-items: center;
   color: var(--primery-text-color);
+  --color1: var(--primery-text-color);
 
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -174,7 +175,7 @@ img {
 
 .auth-nav__link:hover .auth-nav__link--icon,
 .auth-nav__link:focus .auth-nav__link--icon {
-  --color2: var(--accent-text-color);
+  --color1: var(--accent-text-color);
   --color5: var(--accent-text-color);
 }
 
@@ -208,7 +209,7 @@ img {
   text-transform: uppercase;
 }
 
-.hero__button {
+.button {
   display: inline-block;
   padding: 10px 32px;
   font-weight: 700;
@@ -408,7 +409,7 @@ img {
 .team-social__link:hover,
 .team-social__link:focus {
   background-color: var(--accent-text-color);
-  --color1: white;
+  --color3: white;
 }
 
 .team-social__link--icon {
@@ -471,7 +472,7 @@ img {
 .clients__link:hover,
 .clients__link:focus {
   border-color: var(--accent-text-color);
-  --color1: var(--accent-text-color);
+  --color3: var(--accent-text-color);
 }
 
 /* Footer */
@@ -549,7 +550,7 @@ img {
   background-color: var(--background-social);
   background-repeat: no-repeat;
   background-position: center;
-  --color1: var(--white-color);
+  --color3: var(--white-color);
   transition: background-color var(--time-animation) var(--cubic-bezier-dafault);
 }
 
@@ -825,6 +826,11 @@ img {
   border-radius: 50%;
 }
 
+.modal__close:hover,
+.modal__close:focus {
+  fill: var(--accent-text-color);
+}
+
 input {
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -833,6 +839,7 @@ input {
 }
 
 input[type='checkbox'] {
+  margin-right: 8px;
   width: 15px;
   height: 16px;
   background-color: var(--title-text-color);
@@ -840,6 +847,10 @@ input[type='checkbox'] {
 
 .modal__comment {
   height: 120px;
+}
+
+.modal__list {
+  margin-bottom: 30px;
 }
 
 .modal__list--item {
@@ -851,4 +862,18 @@ input[type='checkbox'] {
 }
 
 .modal__link {
+  color: var(--accent-text-color);
+}
+
+.modal__checkbox {
+  display: flex;
+  align-items: center;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.modal__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

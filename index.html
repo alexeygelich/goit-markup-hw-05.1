@@ -64,7 +64,7 @@
       <section class="hero-section">
         <div class="container hero">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero__button" data-modal-open>
+          <button class="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -423,7 +423,9 @@
           </p>
           <button class="subscribe__button">
             <p class="subscribe__label">Подписаться</p>
-            <img src="./img/icon-send.svg" alt="Иконка подписаться" />
+            <svg width="24" height="24">
+              <use href="./img/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -464,15 +466,15 @@
                 >Комментарий</label
               >
             </li>
-            <li class="modal__list--item">
-              <input type="checkbox" name="checkbox" /><label for="comment"
+            <li class="modal__list--item modal__checkbox">
+              <input type="checkbox" name="checkbox" /><label for="checkbox"
                 >Соглашаюсь с рассылкой и принимаю
                 <a class="modal__link" href="">Условия договора</a></label
               >
             </li>
           </ul>
         </form>
-        <button data-modal-close>Отправить</button>
+        <button class="button modal__button">Отправить</button>
         <button class="modal__close" data-modal-close>
           <svg width="11" height="11">
             <use href="./img/symbol-defs.svg#icon-close-black"></use>
